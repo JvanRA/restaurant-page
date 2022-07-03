@@ -1,3 +1,5 @@
+import { loadHome} from './home.js';
+
 function createHeader() {
     const header = document.createElement('header');
     const restaurantName = document.createElement('h1');
@@ -5,7 +7,7 @@ function createHeader() {
     const menu = document.createElement('p');
     const contact = document.createElement('p');
 
-    restaurantName.textContent = 'Pizzeria';
+    restaurantName.textContent = 'The Pizzeria';
     menu.textContent = 'Menu';
     contact.textContent = 'Contact';
     header.appendChild(restaurantName);
@@ -16,9 +18,18 @@ function createHeader() {
     return header;
 }
 
+function createMain() {
+    const main = document.createElement('main');
+    main.classList.add('main');
+
+    return main;
+}
+
 function startWebsite() {
     const content = document.getElementById('content');
-    content.append(createHeader());
+    content.appendChild(createHeader());
+    content.appendChild(createMain());
+    loadHome();
 }
 
 startWebsite();

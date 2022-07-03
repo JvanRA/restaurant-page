@@ -8,15 +8,19 @@ html {
 *, 
 *::before, 
 *::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
     box-sizing: inherit;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: u.$body-font;
     color: var(--dark);
-    background-color: var(--light);
+    background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-repeat: no-repeat;
+    // background-position: center;
+    background-size: max(100vw, 1920px) auto; // 1422px
 }
 
 header {
@@ -24,11 +28,11 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100vw;
+    height: 80px;
     padding: 0 20px;
     position: fixed;
     top: 0;
     color: var(--light);
-    background-color: var(--orangey);
     div {
         display: flex;
         justify-content: space-between;
@@ -36,6 +40,21 @@ header {
         p {
             font-size: 20px;
         }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 125px 10px;
+    color: var(--light);
+    font-size: 42px;
+    text-align: center;
+    p {
+        font-size: 18px;
     }
 }
 
