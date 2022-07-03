@@ -14,7 +14,31 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: u.$font;
-    color: var(--color);
-    background-color: var(--background-color);
+    font-family: u.$body-font;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    color: var(--light);
+    background-color: var(--orangey);
+    div {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+h1 {
+    font-family: u.$header-font;
 }
