@@ -1,4 +1,5 @@
-import { loadHome} from './home.js';
+import { loadFooter } from './footer.js';
+import { loadHome } from './home.js';
 
 function createHeader() {
     const header = document.createElement('header');
@@ -10,10 +11,10 @@ function createHeader() {
     restaurantName.textContent = 'The Pizzeria';
     menu.textContent = 'Menu';
     contact.textContent = 'Contact';
-    header.appendChild(restaurantName);
-    header.appendChild(div);
-    div.appendChild(menu);
-    div.appendChild(contact);
+    header.append(restaurantName);
+    header.append(div);
+    div.append(menu);
+    div.append(contact);
 
     return header;
 }
@@ -27,9 +28,10 @@ function createMain() {
 
 function startWebsite() {
     const content = document.getElementById('content');
-    content.appendChild(createHeader());
-    content.appendChild(createMain());
+    content.append(createHeader());
+    content.append(createMain());
     loadHome();
+    loadFooter();
 }
 
 startWebsite();

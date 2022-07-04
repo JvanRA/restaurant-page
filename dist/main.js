@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/footer.js":
+/*!***********************!*\
+  !*** ./src/footer.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadFooter\": () => (/* binding */ loadFooter)\n/* harmony export */ });\nfunction createFooter() {\n    const footer = document.createElement('footer');\n    const creator = document.createElement('p');\n    const credit = document.createElement('p');\n    creator.classList.add('creator');\n    credit.classList.add('credit');\n    creator.textContent = 'Created by Ivan Añora';\n    credit.textContent = 'Image from Unsplash by Hement Latawa ';\n    footer.append(creator);\n    footer.append(credit);\n\n    return footer;\n}\n\nfunction loadFooter() {\n    const content = document.querySelector('#content');\n    content.append(createFooter());\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/footer.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadHome\": () => (/* binding */ loadHome)\n/* harmony export */ });\nfunction createHome() {\n    const main1 = document.createElement('main');\n    main1.classList.add('main-left');\n    const restaurantName = document.createElement('h1');\n    restaurantName.textContent = 'The Pizzeria';\n    main1.append(restaurantName);\n    const description  = document.createElement('p');\n    description.textContent = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error minima hic beatae cum incidunt fuga eos molestiae ipsum rem nulla sunt, atque voluptates molestias. Nisi sit placeat beatae voluptatibus maxime. Illum laborum, aut tenetur sequi explicabo distinctio, minima ex cumque aperiam at, eos cum ab suscipit eveniet magnam nihil nemo quis impedit sapiente assumenda commodi officia nisi! Facere, perspiciatis sint.'\n    main1.append(description);\n\n    return main1;\n};\n\nfunction loadHome() {\n    const main = document.querySelector('.main');\n    main.append(createHome());\n};\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadHome\": () => (/* binding */ loadHome)\n/* harmony export */ });\nfunction createHome() {\n    const main1 = document.createElement('main');\n    main1.classList.add('main-left');\n    const restaurantName = document.createElement('h1');\n    restaurantName.textContent = 'Welcome to The Pizzeria';\n    main1.append(restaurantName);\n    const description  = document.createElement('p');\n    description.textContent = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error minima hic beatae cum incidunt fuga eos molestiae ipsum rem nulla sunt, atque voluptates molestias. Nisi sit placeat beatae voluptatibus maxime. Illum laborum, aut tenetur sequi explicabo distinctio, minima ex cumque aperiam at, eos cum ab suscipit eveniet magnam nihil nemo quis impedit sapiente assumenda commodi officia nisi! Facere, perspiciatis sint.'\n    main1.append(description);\n\n    return main1;\n}\n\nfunction loadHome() {\n    const main = document.querySelector('.main');\n    main.append(createHome());\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\nfunction createHeader() {\n    const header = document.createElement('header');\n    const restaurantName = document.createElement('h1');\n    const div = document.createElement('div');\n    const menu = document.createElement('p');\n    const contact = document.createElement('p');\n\n    restaurantName.textContent = 'The Pizzeria';\n    menu.textContent = 'Menu';\n    contact.textContent = 'Contact';\n    header.appendChild(restaurantName);\n    header.appendChild(div);\n    div.appendChild(menu);\n    div.appendChild(contact);\n\n    return header;\n}\n\nfunction createMain() {\n    const main = document.createElement('main');\n    main.classList.add('main');\n\n    return main;\n}\n\nfunction startWebsite() {\n    const content = document.getElementById('content');\n    content.appendChild(createHeader());\n    content.appendChild(createMain());\n    (0,_home_js__WEBPACK_IMPORTED_MODULE_0__.loadHome)();\n}\n\nstartWebsite();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.js */ \"./src/footer.js\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\n\nfunction createHeader() {\n    const header = document.createElement('header');\n    const restaurantName = document.createElement('h1');\n    const div = document.createElement('div');\n    const menu = document.createElement('p');\n    const contact = document.createElement('p');\n\n    restaurantName.textContent = 'The Pizzeria';\n    menu.textContent = 'Menu';\n    contact.textContent = 'Contact';\n    header.append(restaurantName);\n    header.append(div);\n    div.append(menu);\n    div.append(contact);\n\n    return header;\n}\n\nfunction createMain() {\n    const main = document.createElement('main');\n    main.classList.add('main');\n\n    return main;\n}\n\nfunction startWebsite() {\n    const content = document.getElementById('content');\n    content.append(createHeader());\n    content.append(createMain());\n    (0,_home_js__WEBPACK_IMPORTED_MODULE_1__.loadHome)();\n    (0,_footer_js__WEBPACK_IMPORTED_MODULE_0__.loadFooter)();\n}\n\nstartWebsite();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ })
 
