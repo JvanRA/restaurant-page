@@ -20,6 +20,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/header.js":
+/*!***********************!*\
+  !*** ./src/header.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadHeader\": () => (/* binding */ loadHeader)\n/* harmony export */ });\nfunction createHeader() {\n    const header = document.createElement('header');\n    const restaurantName = document.createElement('h1');\n    const div = document.createElement('div');\n    const menu = document.createElement('p');\n    const contact = document.createElement('p');\n\n    restaurantName.textContent = 'The Pizzeria';\n    menu.textContent = 'Menu';\n    contact.textContent = 'Contact';\n    header.append(restaurantName);\n    header.append(div);\n    div.append(menu);\n    div.append(contact);\n\n    return header;\n}\n\nfunction loadHeader() {\n    const content = document.querySelector('#content');\n    content.append(createHeader());\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/header.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.js */ \"./src/footer.js\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\n\nfunction createHeader() {\n    const header = document.createElement('header');\n    const restaurantName = document.createElement('h1');\n    const div = document.createElement('div');\n    const menu = document.createElement('p');\n    const contact = document.createElement('p');\n\n    restaurantName.textContent = 'The Pizzeria';\n    menu.textContent = 'Menu';\n    contact.textContent = 'Contact';\n    header.append(restaurantName);\n    header.append(div);\n    div.append(menu);\n    div.append(contact);\n\n    return header;\n}\n\nfunction createMain() {\n    const main = document.createElement('main');\n    main.classList.add('main');\n\n    return main;\n}\n\nfunction startWebsite() {\n    const content = document.getElementById('content');\n    content.append(createHeader());\n    content.append(createMain());\n    (0,_home_js__WEBPACK_IMPORTED_MODULE_1__.loadHome)();\n    (0,_footer_js__WEBPACK_IMPORTED_MODULE_0__.loadFooter)();\n}\n\nstartWebsite();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.js */ \"./src/header.js\");\n/* harmony import */ var _footer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.js */ \"./src/footer.js\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\n\n\nfunction createMain() {\n    const main = document.createElement('main');\n    main.classList.add('main');\n\n    return main;\n}\n\nfunction startWebsite() {\n    const content = document.getElementById('content');\n    (0,_header_js__WEBPACK_IMPORTED_MODULE_0__.loadHeader)();\n    content.append(createMain());\n    (0,_home_js__WEBPACK_IMPORTED_MODULE_2__.loadHome)();\n    (0,_footer_js__WEBPACK_IMPORTED_MODULE_1__.loadFooter)();\n}\n\nstartWebsite();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ })
 
