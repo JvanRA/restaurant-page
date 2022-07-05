@@ -13,7 +13,8 @@ function createHome() {
 
 function loadHome() {
     const main = document.querySelector('.main');
-    main.append(createHome());
+    main.textContent = '';
+    main.appendChild(createHome());
 }
 
 export { loadHome };
