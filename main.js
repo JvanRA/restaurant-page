@@ -20,23 +20,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/header.js":
-/*!***********************!*\
-  !*** ./src/header.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadHeader\": () => (/* binding */ loadHeader)\n/* harmony export */ });\nfunction createHeader() {\n    const header = document.createElement('header');\n    const restaurantName = document.createElement('h1');\n    const div = document.createElement('div');\n    const menu = document.createElement('p');\n    const contact = document.createElement('p');\n\n    restaurantName.textContent = 'The Pizzeria';\n    menu.textContent = 'Menu';\n    contact.textContent = 'Contact';\n    header.append(restaurantName);\n    header.append(div);\n    div.append(menu);\n    div.append(contact);\n\n    return header;\n}\n\nfunction loadHeader() {\n    const content = document.querySelector('#content');\n    content.append(createHeader());\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/header.js?");
-
-/***/ }),
-
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadHome\": () => (/* binding */ loadHome)\n/* harmony export */ });\nfunction createHome() {\n    const main1 = document.createElement('main');\n    main1.classList.add('main-left');\n    const restaurantName = document.createElement('h1');\n    restaurantName.textContent = 'Welcome to The Pizzeria';\n    main1.append(restaurantName);\n    const description  = document.createElement('p');\n    description.textContent = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error minima hic beatae cum incidunt fuga eos molestiae ipsum rem nulla sunt, atque voluptates molestias. Nisi sit placeat beatae voluptatibus maxime. Illum laborum, aut tenetur sequi explicabo distinctio, minima ex cumque aperiam at, eos cum ab suscipit eveniet magnam nihil nemo quis impedit sapiente assumenda commodi officia nisi! Facere, perspiciatis sint.'\n    main1.append(description);\n\n    return main1;\n}\n\nfunction loadHome() {\n    const main = document.querySelector('.main');\n    main.append(createHome());\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadHome\": () => (/* binding */ loadHome)\n/* harmony export */ });\nfunction createHome() {\n    const main1 = document.createElement('main');\n    main1.classList.add('main-left');\n    const restaurantName = document.createElement('h1');\n    restaurantName.textContent = 'Welcome to The Pizzeria';\n    main1.append(restaurantName);\n    const description  = document.createElement('p');\n    description.textContent = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error minima hic beatae cum incidunt fuga eos molestiae ipsum rem nulla sunt, atque voluptates molestias. Nisi sit placeat beatae voluptatibus maxime. Illum laborum, aut tenetur sequi explicabo distinctio, minima ex cumque aperiam at, eos cum ab suscipit eveniet magnam nihil nemo quis impedit sapiente assumenda commodi officia nisi! Facere, perspiciatis sint.'\n    main1.append(description);\n\n    return main1;\n}\n\nfunction loadHome() {\n    const main = document.querySelector('.main');\n    main.textContent = '';\n    main.appendChild(createHome());\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
 
 /***/ }),
 
@@ -46,7 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.js */ \"./src/header.js\");\n/* harmony import */ var _footer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.js */ \"./src/footer.js\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\n\n\nfunction createMain() {\n    const main = document.createElement('main');\n    main.classList.add('main');\n\n    return main;\n}\n\nfunction startWebsite() {\n    const content = document.getElementById('content');\n    (0,_header_js__WEBPACK_IMPORTED_MODULE_0__.loadHeader)();\n    content.append(createMain());\n    (0,_home_js__WEBPACK_IMPORTED_MODULE_2__.loadHome)();\n    (0,_footer_js__WEBPACK_IMPORTED_MODULE_1__.loadFooter)();\n}\n\nstartWebsite();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer */ \"./src/footer.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\nfunction createHeader() {\n    const header = document.createElement('header');\n    const restaurantName = document.createElement('h1');\n    restaurantName.addEventListener('click', _home__WEBPACK_IMPORTED_MODULE_1__.loadHome);\n    const div = document.createElement('div');\n    const menu = document.createElement('p');\n    menu.addEventListener('click', _menu__WEBPACK_IMPORTED_MODULE_2__.loadMenu);\n    const contact = document.createElement('p');\n    restaurantName.textContent = 'The Pizzeria';\n    menu.textContent = 'Menu';\n    contact.textContent = 'Contact';\n    header.append(restaurantName);\n    header.append(div);\n    div.append(menu);\n    div.append(contact);\n\n    return header;\n}\n\nfunction createMain() {\n    const main = document.createElement('main');\n    main.classList.add('main');\n\n    return main;\n}\n\nfunction startWebsite() {\n    const content = document.getElementById('content');\n    content.append(createHeader());\n    content.append(createMain());\n    (0,_home__WEBPACK_IMPORTED_MODULE_1__.loadHome)();\n    (0,_footer__WEBPACK_IMPORTED_MODULE_0__.loadFooter)();\n}\n\nstartWebsite();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadMenu\": () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction createItem() {\n    const item = document.createElement('div');\n    item.classList.add('item');\n    const itemName = document.createElement('h1');\n    itemName.classList.add('item-name');\n    itemName.textContent = 'Lorem Ipsum Pizza';\n    item.append(itemName);\n    const description  = document.createElement('p');\n    description.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';\n    item.append(description);\n\n    return item;\n}\n\nfunction createMenu() {\n    const main2 = document.createElement('main');\n    main2.classList.add('main-menu');\n    const restaurantMenu = document.createElement('h1');\n    restaurantMenu.textContent = 'Menu';\n    main2.append(restaurantMenu);\n    const bestSellers = document.createElement('div');\n    bestSellers.classList.add('best-sellers');\n    main2.append(bestSellers);\n    for(let i = 0; i < 6; i++) {\n        bestSellers.append(createItem());\n    }\n\n    return main2;\n}\n\nfunction loadMenu() {\n    const main = document.querySelector('.main');\n    main.textContent = '';\n    main.appendChild(createMenu());\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ })
 
