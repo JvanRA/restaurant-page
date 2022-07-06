@@ -1,6 +1,7 @@
 import { loadFooter } from './footer';
 import { loadHome } from './home';
 import { loadMenu } from './menu';
+import { loadAbout } from './about';
 
 function createHeader() {
     const header = document.createElement('header');
@@ -9,14 +10,15 @@ function createHeader() {
     const div = document.createElement('div');
     const menu = document.createElement('p');
     menu.addEventListener('click', loadMenu);
-    const contact = document.createElement('p');
+    const about = document.createElement('p');
+    about.addEventListener('click', loadAbout);
     restaurantName.textContent = 'The Pizzeria';
     menu.textContent = 'Menu';
-    contact.textContent = 'Contact';
+    about.textContent = 'About';
     header.append(restaurantName);
     header.append(div);
     div.append(menu);
-    div.append(contact);
+    div.append(about);
 
     return header;
 }
